@@ -1,0 +1,147 @@
+:root {
+    --radius: 10px;
+    --mainIndent: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid currentColor;
+    border-radius: var(--radius);
+    padding: var(--mainIndent);
+    font-size: 18px;
+}
+
+.btn {
+    height: 40px;
+    font-size: 18px;
+    line-height: 1.2;
+    border-radius: var(--radius);
+    border: none;
+    color: #fff;
+    transition: opacity ease .25s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .75;
+}
+
+.btn_save {
+    background-color: darkseagreen;
+}
+
+.btn_clear {
+    background-color: #cc5b64;
+}
+
+.btn_trash {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    opacity: .3;
+    transition: opacity ease .25s;
+    cursor: pointer;
+}
+
+.btn_trash:hover {
+    opacity: 1;
+}
+
+.icon-trash {
+    display: block;
+    height: 100%;
+    background: url("icon-trash.png") no-repeat center;
+    background-size: cover;
+}
+
+body {
+    color: #282828;
+    font: 400 14px/1.2 Helvetica, sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    /* insta gradient --> background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) no-repeat center;*/
+    background: linear-gradient(to bottom, #fffbd5, #b20a2c) no-repeat center;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.title {
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 640px;
+    background-color: #282828;
+    padding: var(--mainIndent);
+    border-radius: var(--radius);
+}
+
+.todo-list {
+    margin: 10px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.todo-item {
+    font-size: 16px;
+    margin: var(--mainIndent) var(--mainIndent) 0 0;
+    padding: var(--mainIndent);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    background-color: #faeac9;
+    cursor: pointer;
+}
+
+.todo-item:hover {
+    box-shadow: inset 0 0 0 1px #000;
+}
+
+.todo-item__text {
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+.todo-item.is-checked .todo-item__text {
+    text-decoration: line-through;
+}
+
+.todo__controls {
+    padding: var(--mainIndent) 0;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--mainIndent);
+}
+
+.todo__controls .btn__wrap {
+    width: 50%;
+}
+
+.todo__controls .btn {
+    width: 100%;
+}

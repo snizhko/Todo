@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my Todo</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="todo.js"></script>
+</head>
+<body>
+
+    <main>
+        <h1 class="title">My Todo list</h1>
+
+        <div class="todo">
+            <div class="todo__input-wrap">
+                <input type="text" class="todo__input js-todo-input" placeholder="push ENTER for create">
+            </div>
+
+            <ul class="todo-list js-todo-list">
+                <li class="todo-item">
+                    <span class="todo-item__text">delete me</span>
+                    <button class="todo-item__btn btn_trash js-btn-trash">
+                        <i class="icon-trash"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="todo__controls">
+                <div class="btn__wrap btn__wrap_save">
+                    <button class="btn btn_save js-btn-save">Save</button>
+                </div>
+                <div class="btn__wrap btn__wrap_clear">
+                    <button class="btn btn_clear js-btn-clear">Clear</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
